@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-ru" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 10px;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 10px;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        font-size: 10px;
+      }
+      .newslt {
+        background: #fdfdfd;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 60em;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.4em 4.8em;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 1.2em;
+      }
+      .logo-icon {
+        background-image: url("https://image.kafedra.tech/mail/logo.webp");
+        background-repeat: no-repeat;
+        width: 9em;
+        height: 3.5em;
+      }
+      .logo-text {
+        background-image: url("https://image.kafedra.tech/mail/Oc.webp");
+        background-repeat: no-repeat;
+        width: 9.7em;
+        height: 2.5em;
+      }
+      .nwslt-border {
+        border: 0.2px rgba(215, 215, 215, 0.3);
+        border-style: solid none;
+        padding: 4.8em;
+      }
+      .nwslt-text,
+      .nwslt-img {
+        margin-bottom: 4.8em;
+      }
+      .nwslt-img {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .nwslt-btn {
+        text-align: center;
+      }
+      .btn {
+        display: block;
+        font-size: 3em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-full {
+        transition: 0.5s;
+      }
+      .btn-full,
+      .btn-full:link,
+      .btn-full:visited {
+        background-color: #435edf;
+        color: #fff;
+        padding: 0.53em 0;
+        text-align: center;
+      }
+      .btn-full:hover {
+        background-color: #697ee5;
+      }
+      .btn-outline,
+      .btn-outline:link,
+      .btn-outline:visited {
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 8px;
+        font-size: 1.2em;
+        padding: 0.6em 1.3em;
+        color: #000;
+      }
+      .nwslt-link {
+        margin-top: 3.2em;
+      }
+      .nwslt-text--lg {
+        font-size: 5em;
+        font-weight: 700;
+        line-height: 1em;
+      }
+      .nwslt-text .nwslt-text--lg {
+        margin-bottom: 0.32em;
+      }
+      .nwslt-text--md {
+        font-size: 1.4em;
+        line-height: 1.3em;
+      }
+      .nwslt-text .nwslt-text--md {
+        margin-bottom: 0.6em;
+      }
+      .nwslt-text .nwslt-text--md:nth-child(5n) {
+        margin-bottom: 2.4em;
+      }
+      .nwslt-text--xlg {
+        font-size: 5.2em;
+        font-weight: 800;
+      }
+      .nwslt-text .nwslt-text--xlg {
+        margin: 0.8em 0;
+      }
+      .nwslt-text--sm {
+        font-size: 1.2em;
+      }
+      .nwslt-text .nwslt-text--sm:last-child {
+        margin: 1.6em 0;
+        color: #3f3f3f;
+      }
+      .footer-content {
+        max-width: 80%;
+        margin: 5em auto 3.2em auto;
+      }
+      .footer-link,
+      .year {
+        display: block;
+        text-align: center;
+      }
+      .footer-link,
+      .footer-link:link,
+      .footer-link:visited {
+        text-decoration: none;
+        color: #747474;
+      }
+      .contacts {
+        font-size: 1.2em;
+        font-style: normal;
+        color: #747474;
+      }
+      .contacts .footer-link {
+        margin-bottom: 1.6em;
+      }
+      .contacts p {
+        text-align: center;
+        line-height: 2em;
+        margin-bottom: 1.3em;
+      }
+      .social-links {
+        list-style: none;
+        display: flex;
+        gap: 1.6em;
+        justify-content: center;
+        margin-bottom: 2.4em;
+      }
+      .social-links--bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.6em;
+        height: 6.6em;
+        border-radius: 200px;
+        background-color: #a3d3ff;
+        transition: 0.5s;
+      }
+      .social-links--bg:hover {
+        background-color: #b5dcff;
+      }
+      .social-links--tg {
+        background-image: url("https://image.kafedra.tech/mail/tg.webp");
+        background-repeat: no-repeat;
+        width: 2.8em;
+        height: 2.6em;
+      }
+      .social-links--linkedin {
+        background-image: url("https://image.kafedra.tech/mail/in.webp");
+        background-repeat: no-repeat;
+        width: 2.4em;
+        height: 2.4em;
+      }
+      .social-links--fb {
+        background-image: url("https://image.kafedra.tech/mail/fb.webp");
+        background-repeat: no-repeat;
+        width: 1.6em;
+        height: 2.4em;
+      }
+      .year {
+        display: block;
+      }
+    </style>
+    <title>Email-PWD-Change</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="newslt">
+        <nav class="nav">
+          <a href="#" class="nav-link">
+            <div class="logo">
+              <div class="logo-icon"></div>
+              <div class="logo-text"></div>
+            </div>
+          </a>
+        </nav>
+        <main>
+          <div class="nwslt-border">
+            <div class="nwslt-text">
+              <p class="nwslt-text--lg">Hello, Anton</p>
+              <p class="nwslt-text--md">
+                Мы получили запрос об изменении пароля Вашей учетной записи в
+                Pellu.
+              </p>
+              <div class="nwslt-text--xlg">393583</div>
+              <p class="nwslt-text--md">
+                Введите этот код, чтобы завершить изменение.
+              </p>
+              <p class="nwslt-text--md">С уважением, команда Pellu.</p>
+              <p class="nwslt-text--sm">
+                <strong
+                  >Это были не Вы? Обязательно
+                  <a href="#">измените свой пароль</a> прямо сейчас</strong
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer-content">
+            <ul class="social-links">
+              <li>
+                <a class="footer-link" href="#">
+                  <div class="social-links--bg">
+                    <div class="social-links--tg"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">
+                  <div class="social-links--bg">
+                    <div class="social-links--linkedin"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">
+                  <div class="social-links--bg">
+                    <div class="social-links--fb"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <address class="contacts">
+              <a class="footer-link" href="mailto:support@pellu.io"
+                >support@pellu.io</a
+              >
+              <p>
+                Pellu, 201 Spear St., Suite 1100 Tashkent, CA 10001, <br />
+                Shachrisabs 3 States
+              </p>
+              <span class="year">2022</span>
+            </address>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
